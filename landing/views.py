@@ -1,7 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
+from django.apps import apps
 
 def index(request):
-    dashboard = loader.get_template('dashboard.html')
-    return HttpResponse(dashboard.render())
+    activeApps = ['zendev']
+    appsInfo = []
+
+    for info in activeApps:
+        appConfig = apps.get_app_config(info)
+        appsInfo.append({
+            'name': appConfig.verbose_name,
+            'label':appConfig.label,
+        })
+
+    return render(request, 'dashboard.html', {'appsInfo':appsInfo})

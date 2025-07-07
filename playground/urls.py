@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('landing.urls')),
+    path('zendev/', include('zendev.urls')),
     path('admin/', admin.site.urls),
 ]
