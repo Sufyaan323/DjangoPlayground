@@ -1,0 +1,30 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="cutout">
+      <!-- Base shape (everything visible) -->
+      <rect x="4" y="4" width="32" height="32" rx="4" fill="white"/>
+
+      <!-- Transparent screen area -->
+      <rect x="10" y="6" width="20" height="6" rx="1" fill="black"/>
+
+      <!-- Transparent buttons -->
+      <!-- Row 1 -->
+      <rect x="10" y="16" width="4" height="4" rx="1" fill="black"/>
+      <rect x="18" y="16" width="4" height="4" rx="1" fill="black"/>
+      <rect x="26" y="16" width="4" height="4" rx="1" fill="black"/>
+
+      <!-- Row 2 -->
+      <rect x="10" y="22" width="4" height="4" rx="1" fill="black"/>
+      <rect x="18" y="22" width="4" height="4" rx="1" fill="black"/>
+      <rect x="26" y="22" width="4" height="4" rx="1" fill="black"/>
+
+      <!-- Row 3 -->
+      <rect x="10" y="28" width="4" height="4" rx="1" fill="black"/>
+      <rect x="18" y="28" width="4" height="4" rx="1" fill="black"/>
+      <rect x="26" y="28" width="4" height="4" rx="1" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Base rectangle with mask to cut out screen and buttons -->
+  <rect x="4" y="4" width="32" height="32" rx="4" fill="black" mask="url(#cutout)"/>
+</svg>

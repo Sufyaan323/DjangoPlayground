@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.apps import apps
 
 def index(request):
-    activeApps = ['zendev']
+    activeApps = ['zendev', 'calculator']
     appsInfo = []
 
     for info in activeApps:
