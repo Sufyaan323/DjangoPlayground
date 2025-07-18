@@ -32,6 +32,29 @@ This is a sandbox used to experiment with Django and familiarise with the potent
    python manage.py runserver
    ```
 
+## Configuration
+The database settings may need to be configured for MYSQL database.
+You can find them in:
+
+```sh
+./playground/settings,py
+```
+
+Between line 80-89:
+
+```sh
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'playground',
+        'USER': 'django_playground',
+        'PASSWORD': 'django_pass',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+```
+
 ## Notes
 
 A superuser should be created using the following command:
