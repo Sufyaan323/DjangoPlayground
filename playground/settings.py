@@ -83,6 +83,8 @@ DATABASES = {
         'NAME': 'playground',
         'USER': 'django_playground',
         'PASSWORD': 'django_pass',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
