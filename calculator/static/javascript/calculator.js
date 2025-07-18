@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", () => {
             const value = button.textContent;
             if (value === "=") {
-                output.textContent = eval(output.textContent);
+                output.textContent = parseFloat(eval(output.textContent).toFixed(10));
             }
             else{
                 output.textContent += value;
