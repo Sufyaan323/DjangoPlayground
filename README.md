@@ -33,6 +33,7 @@ This is a sandbox used to experiment with Django and familiarise with the potent
    ```
 
 ## Configuration
+
 The database settings may need to be configured for MYSQL database.
 You can find them in:
 
