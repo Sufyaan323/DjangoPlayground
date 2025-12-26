@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +21,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^b$h+^%1=n_0n!y3m&60+jp=#e$!mv4u(y^(8&!3sdnirbo+tv'
+SECRET_KEY = config('DJANGO_SECRET_KEY',
+                    default='django-insecure-^b$h+^%1=n_0n!y3m&60+jp=#e$!mv4u(y^(8&!3sdnirbo+tv'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG',
+               default=False,
+               cast=bool
+)
 
 ALLOWED_HOSTS = [
-    "*",
+    '*',
 ]
 
 
@@ -82,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'playground',
         'USER': 'django_playground',
-        'PASSWORD': 'django_pass',
+        'PASSWORD': config('SQL_PASS'),
         'HOST': 'localhost',
         'PORT': '3306',
     }
